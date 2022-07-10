@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar sx={{ height: 45 }} position="sticky">
-          <Typography style={{fontSize: '18px', padding: '15px', fontWeight: 'bold', textAlign: 'center'}} variant="h4" component="div" sx={{ flexGrow: 1 }}>
+          <Typography style={{fontSize: '20px', padding: '15px', fontWeight: 'bold', textAlign: 'center'}} variant="h4" component="div" sx={{ flexGrow: 1 }}>
             StayCation
           </Typography>
       </AppBar>

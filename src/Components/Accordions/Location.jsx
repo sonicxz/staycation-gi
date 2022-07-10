@@ -5,9 +5,28 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import TextField from "@mui/material/TextField";
-import Box from "@mui/material/Box";
 
 const Location = () => {
+  // const initialState = {
+  //   chooseDestination: 0,
+  //   chooseTravel: 0,
+  //   chooseProperty: 0,
+  //   chooseAccordian: 0,
+  // };
+
+  // const reducer = (initialState, action) => {
+  //   switch (action.type) {
+  //     case "destinationDone": {
+  //       return { ...initialState, chooseDestination: 1 };
+  //     }
+  //     case "travelSelected": {
+  //       return { ...initialState, chooseTravel: 1 };
+  //     }
+  //     case "propertySelected": {
+  //       return { ...initialState, chooseProperty: 1 };
+  //     }
+  //   }
+  // };
   const [location, setLocation] = useState("");
   return (
     <div>
@@ -19,15 +38,15 @@ const Location = () => {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Choose Destination: {location}</Typography>
+          <Typography>Choose Destination</Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails style={{backgroundColor: 'white', color: 'black'}}>
           <TextField
             sx={{
               color: "white",
               width: 500,
               maxWidth: "100%",
-              marginBottom: '20px',
+              marginBottom: "20px",
             }}
             id="standard-basic"
             label="Choose Destination"
@@ -35,22 +54,6 @@ const Location = () => {
             value={location}
             onChange={(e) => setLocation(e.target.value)}
           />
-
-          {location ? (
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: 'space-between',
-                padding: '15px',
-                width: 300,
-                height: 130,
-                backgroundColor: "primary.dark",
-              }}
-            >
-              <Typography>Goa</Typography>
-              <img style={{width: '150px', height: '100px'}} alt="logo" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/fc/f0/goa.jpg?w=700&h=500&s=1" />
-            </Box>
-          ) : null}
         </AccordionDetails>
       </Accordion>
     </div>
