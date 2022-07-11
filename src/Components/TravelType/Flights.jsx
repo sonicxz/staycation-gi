@@ -9,7 +9,7 @@ const data = [
   {
     carrier_name: "SpiceJet",
     date: "11 July 2022",
-    departurePlace: "New Delhi",
+    departurePlace: "DEL New Delhi, India",
     departureTime: "20:25",
     journey_time: "4h",
     price: "₹2300",
@@ -19,7 +19,7 @@ const data = [
   {
     carrier_name: "Go Air",
     date: "22 July 2022",
-    departurePlace: "New Delhi",
+    departurePlace: "DEL New Delhi, India",
     departureTime: "20:25",
     journey_time: "4h",
     price: "₹2300",
@@ -29,7 +29,7 @@ const data = [
   {
     carrier_name: "Go Air",
     date: "22 July 2022",
-    departurePlace: "New Delhi",
+    departurePlace: "DEL New Delhi, India",
     departureTime: "20:25",
     journey_time: "4h",
     price: "₹2300",
@@ -42,8 +42,9 @@ const Flight = () => {
   return (
     <div>
       {data.map((data) => (
-        <Card sx={{ cursor: "pointer", minWidth: 275, marginBottom: "15px" }}>
+        <Card sx={{ cursor: "pointer", minWidth: 275, marginBottom: "15px", marginTop: "15px" }}>
           <CardContent>
+            <img style={{width: '150px', height: '100px'}} src="https://m.economictimes.com/thumb/msid-80049437,width-1200,height-900,resizemode-4,imgsize-38409/goair-agencies.jpg" alt="logo" />
             <Typography
               sx={{ fontSize: 14 }}
               color="text.secondary"

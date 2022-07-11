@@ -8,7 +8,7 @@ import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 const Buses = () => {
   return (
     <Paper elevation={3}>
-    <Card sx={{ minWidth: 275 }}>
+    <Card sx={{ minWidth: 275, marginTop: '15px' }}>
       <CardContent>
         <ErrorOutlineIcon />
         <Typography variant="body2">No Rides Avaliable</Typography>

@@ -53,15 +53,22 @@ const Hotels = () => {
       {data.map((data) => (
         <Card
           sx={{
-            cursor: 'pointer',
+            cursor: "pointer",
             minWidth: 275,
             marginBottom: "15px",
             marginRight: "10px",
             marginLeft: "10px",
             padding: "10px",
+            alignItems: "center",
+            textAlign: "center",
           }}
         >
           <CardContent>
+            <img
+              style={{ width: "200px", height: "100px" }}
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeY_zJi4QwvhKjskhzyFqucAwE78IX6tudg_eJZBKfg-mIWdbAhSoas5On_kdf0xD3Hg&usqp=CAU"
+              alt="logo"
+            />
             <Typography
               sx={{ fontSize: 14 }}
               color="text.secondary"
@@ -79,8 +86,10 @@ const Hotels = () => {
                 marginBottom: "5px",
               }}
             >
-              <Typography variant="body2">{data.text2}</Typography>
-              <Typography variant="body2">{data.text3}</Typography>
+              <ul>
+                <li>{data.text2}</li>
+                <li>{data.text3}</li>
+              </ul>
             </div>
             <Typography variant="body2">{data.sell_price}</Typography>
           </CardContent>

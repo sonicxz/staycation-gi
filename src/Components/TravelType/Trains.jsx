@@ -44,7 +44,8 @@ const Trains = () => {
     <div>
       {data.map((data) => (
         <Box>
-          <Card sx={{ cursor: "pointer", minWidth: 275, marginBottom: "15px" }}>
+          <Card sx={{ cursor: "pointer", minWidth: 275, marginBottom: "15px", marginTop: '15px' }}>
+            <img style={{width: '150px', height: '100px', paddingTop: '10px'}} src="https://play-lh.googleusercontent.com/_nVu27FHFwKVC29dt21p51tdkWZmONHwYVyzbDV45mGB_8szkEMcMlC1GpvLmlx1QN0" alt="logo" />
             <CardContent>
               <Typography
                 sx={{ fontSize: 14 }}
