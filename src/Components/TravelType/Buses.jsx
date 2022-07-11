@@ -11,7 +11,7 @@ const Buses = () => {
     <Card sx={{ minWidth: 275 }}>
       <CardContent>
         <ErrorOutlineIcon />
-        <Typography variant="body2">No Rides Avalable</Typography>
+        <Typography variant="body2">No Rides Avaliable</Typography>
       </CardContent>
     </Card>
     </Paper>

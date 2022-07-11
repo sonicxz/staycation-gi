@@ -5,7 +5,8 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Box } from "@mui/system";
-import Hotels from "./Hotels";
+import Bike from "../Activities/Bike";
+import Car from "../Activities/Car";
 
 const Location = () => {
   return (
@@ -15,7 +16,7 @@ const Location = () => {
           style={{
             margin: "100px",
             color: "white",
-            backgroundColor: "#6200EE"
+            backgroundColor: "#6200EE",
           }}
         >
           <AccordionSummary
@@ -23,10 +24,23 @@ const Location = () => {
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography>Choose Accomdations</Typography>
+            <Typography>Choose Activities</Typography>
           </AccordionSummary>
-          <AccordionDetails style={{backgroundColor: 'white', color: 'black'}}>
-            <Hotels />
+          <AccordionDetails
+            style={{ backgroundColor: "white", color: "black" }}
+          >
+              <div>
+                <Typography variant="h5" style={{ marginBottom: "5px" }}>
+                  Bike Rentals
+                </Typography>
+                <Bike />
+              </div>
+              <div>
+                <Typography variant="h5" style={{ marginBottom: "5px" }}>
+                  Car Rentals
+                </Typography>
+                <Car />
+              </div>
           </AccordionDetails>
         </Accordion>
       </Box>

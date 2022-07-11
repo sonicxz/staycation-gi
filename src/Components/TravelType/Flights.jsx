@@ -42,32 +42,28 @@ const Flight = () => {
   return (
     <div>
       {data.map((data) => (
-          <Card sx={{ minWidth: 275, marginBottom: '15px' }}>
-            <CardContent>
-              <Typography
-                sx={{ fontSize: 14 }}
-                color="text.secondary"
-                gutterBottom
-              >
-                {data.carrier_name}
-              </Typography>
-              <Typography variant="body2">
-                {data.departurePlace}
-              </Typography>
-              <br />
-              <div style={{display: 'flex', justifyContent: 'space-evenly'}}>
-                <Typography variant="body2">
-                  {data.departureTime}
-                </Typography>
-                <Typography variant="body2">{data.journey_time}</Typography>
-                <Typography variant="body2">{data.arrivalTime}</Typography>
-              </div>
-              <Typography variant="body2">{data.price}</Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small">Book Now</Button>
-            </CardActions>
-          </Card>
+        <Card sx={{ cursor: "pointer", minWidth: 275, marginBottom: "15px" }}>
+          <CardContent>
+            <Typography
+              sx={{ fontSize: 14 }}
+              color="text.secondary"
+              gutterBottom
+            >
+              {data.carrier_name}
+            </Typography>
+            <Typography variant="body2">{data.departurePlace}</Typography>
+            <br />
+            <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+              <Typography variant="body2">{data.departureTime}</Typography>
+              <Typography variant="body2">{data.journey_time}</Typography>
+              <Typography variant="body2">{data.arrivalTime}</Typography>
+            </div>
+            <Typography variant="body2">{data.price}</Typography>
+          </CardContent>
+          <CardActions>
+            <Button size="small">Book Now</Button>
+          </CardActions>
+        </Card>
       ))}
     </div>
   );
