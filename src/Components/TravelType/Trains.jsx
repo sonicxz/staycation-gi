@@ -18,7 +18,7 @@ const data = [
     arrivalPlace: "Vasco Da Gama (VSG)",
   },
   {
-    carrier_name: "GOA EXPRESS",
+    carrier_name: "EXPRESS",
     date: "July 11",
     departurePlace: "New Delhi (NDLS)",
     departureTime: "3:15 PM",
@@ -28,7 +28,7 @@ const data = [
     arrivalPlace: "Vasco Da Gama (VSG)",
   },
   {
-    carrier_name: "GOA EXPRESS",
+    carrier_name: "Delhi EXPRESS",
     date: "July 11",
     departurePlace: "New Delhi (NDLS)",
     departureTime: "3:15 PM",
@@ -44,8 +44,20 @@ const Trains = () => {
     <div>
       {data.map((data) => (
         <Box>
-          <Card sx={{ cursor: "pointer", minWidth: 275, marginBottom: "15px", marginTop: '15px' }}>
-            <img style={{width: '150px', height: '100px', paddingTop: '10px'}} src="https://play-lh.googleusercontent.com/_nVu27FHFwKVC29dt21p51tdkWZmONHwYVyzbDV45mGB_8szkEMcMlC1GpvLmlx1QN0" alt="logo" />
+          <Card
+            key={data.carrier_name}
+            sx={{
+              cursor: "pointer",
+              minWidth: 275,
+              marginBottom: "15px",
+              marginTop: "15px",
+            }}
+          >
+            <img
+              style={{ width: "150px", height: "100px", paddingTop: "10px" }}
+              src="https://play-lh.googleusercontent.com/_nVu27FHFwKVC29dt21p51tdkWZmONHwYVyzbDV45mGB_8szkEMcMlC1GpvLmlx1QN0"
+              alt="logo"
+            />
             <CardContent>
               <Typography
                 sx={{ fontSize: 14 }}

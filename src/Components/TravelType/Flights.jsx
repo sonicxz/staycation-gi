@@ -27,7 +27,7 @@ const data = [
     arrivalPlace: "Goa",
   },
   {
-    carrier_name: "Go Air",
+    carrier_name: "Indigo",
     date: "22 July 2022",
     departurePlace: "DEL New Delhi, India",
     departureTime: "20:25",
@@ -42,7 +42,7 @@ const Flight = () => {
   return (
     <div>
       {data.map((data) => (
-        <Card sx={{ cursor: "pointer", minWidth: 275, marginBottom: "15px", marginTop: "15px" }}>
+        <Card key={data.carrier_name} sx={{ cursor: "pointer", minWidth: 275, marginBottom: "15px", marginTop: "15px" }}>
           <CardContent>
             <img style={{width: '150px', height: '100px'}} src="https://m.economictimes.com/thumb/msid-80049437,width-1200,height-900,resizemode-4,imgsize-38409/goair-agencies.jpg" alt="logo" />
             <Typography

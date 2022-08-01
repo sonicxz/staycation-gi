@@ -75,6 +75,7 @@ const Location = () => {
             <div style={{display: 'flex', justifyContent: 'space-evenly'}}>
               {data.map((data) => (
                 <Card
+                key={data.name}
                 sx={{
                   textAlign: 'center',
                   minWidth: 275,

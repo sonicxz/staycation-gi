@@ -37,6 +37,7 @@ const Bike = () => {
     <div>
       {data.map((data) => (
         <Card
+        key={data.name}
           sx={{
             cursor: 'pointer',
             minWidth: 275,

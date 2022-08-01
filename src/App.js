@@ -1,20 +1,17 @@
 import "./App.css";
-import Header from "./Components/Header";
-import Location from "./Components/Accordions/Location";
-import Travel from "./Components/Accordions/Travel";
-import Accomdations from "./Components/Accordions/Accomdations";
-import Activities from "./Components/Accordions/Activities";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./Components/Home/Home";
 
 const App = () => {
   return (
     <div className="App">
-      <Header />
-      <Location />
-      <Travel />
-      <Accomdations />
-      <Activities />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Router>
     </div>
   );
-}
+};
 
 export default App;

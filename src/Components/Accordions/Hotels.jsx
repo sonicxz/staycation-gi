@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 
 const data = [
   {
-    name: "Calvin's Retreat",
+    name: "Calvin's",
     address: "Benaulim",
     ratings: 4.5,
     text1: "Entire Apartment",
@@ -29,7 +29,7 @@ const data = [
     taxes: 320,
   },
   {
-    name: "Calvin's Retreat",
+    name: "Calvin's Retreats",
     address: "Benaulim",
     ratings: 4.5,
     text1: "Entire Apartment",
@@ -52,6 +52,7 @@ const Hotels = () => {
     >
       {data.map((data) => (
         <Card
+        key={data.name}
           sx={{
             cursor: "pointer",
             minWidth: 275,
