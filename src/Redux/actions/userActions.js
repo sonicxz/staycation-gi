@@ -1,3 +1,0 @@
-const userActions = (type, payload) = {
-    
-}

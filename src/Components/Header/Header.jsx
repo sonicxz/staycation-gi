@@ -2,18 +2,24 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { Button } from "@mui/material";
-import { auth, createUserDocumentFromAuth, db, provider } from "../../Firebase";
+import { auth, provider } from "../../Firebase";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const user = useSelector((state) => state.user.currentUser);
   const handelAuth = () => {
     auth
       .signInWithPopup(provider)
       .then((result) => {
-        createUserDocumentFromAuth(result.user);
+        console.log(result.user);
       })
       .catch((error) => {
         console.log(error);
       });
+  };
+
+  const signOut = () => {
+    auth.signOut();
   };
   return (
     <Box
@@ -30,9 +36,15 @@ const Header = () => {
       <Typography sx={{ fontSize: 30, color: "white", paddingRight: 10 }}>
         StayCation
       </Typography>
-      <Button sx={{ color: "white" }} onClick={handelAuth}>
-        Sign In/Log In
-      </Button>
+      {user ? (
+        <Button sx={{ color: "white" }} onClick={signOut}>
+          Sign Out
+        </Button>
+      ) : (
+        <Button sx={{ color: "white" }} onClick={handelAuth}>
+          Sign In/Log In
+        </Button>
+      )}
     </Box>
   );
 };
