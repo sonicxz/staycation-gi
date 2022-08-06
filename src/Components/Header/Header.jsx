@@ -4,23 +4,15 @@ import Typography from "@mui/material/Typography";
 import { Button } from "@mui/material";
 import { auth, provider } from "../../Firebase";
 import { useSelector } from "react-redux";
+import SignInModal from "../Modals/Sign_Login";
 
 const Header = () => {
   const user = useSelector((state) => state.user.currentUser);
-  const handelAuth = () => {
-    auth
-      .signInWithPopup(provider)
-      .then((result) => {
-        console.log(result.user);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
 
   const signOut = () => {
     auth.signOut();
   };
+
   return (
     <Box
       sx={{
@@ -41,9 +33,7 @@ const Header = () => {
           Sign Out
         </Button>
       ) : (
-        <Button sx={{ color: "white" }} onClick={handelAuth}>
-          Sign In/Log In
-        </Button>
+        <SignInModal />
       )}
     </Box>
   );
